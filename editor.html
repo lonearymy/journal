@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen p-4 antialiased">
+    <div class="max-w-lg mx-auto bg-white p-6 shadow-lg rounded-2xl border border-gray-100">
+        <div class="flex items-center gap-4 mb-6">
+            <a href="index.html" class="text-gray-600 hover:text-gray-900 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                </svg>
+            </a>
+            <h1 class="text-xl font-bold text-gray-800">Edit Journal</h1>
+        </div>
+        
+        <form id="journalForm" class="space-y-4">
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Intern's Name</label>
+                <input type="text" id="internName" class="w-full p-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all">
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Company</label>
+                <input type="text" id="companyName" class="w-full p-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all">
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Date</label>
+                    <input type="date" id="date" class="w-full p-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Week No.</label>
+                    <input type="number" id="weekNumber" class="w-full p-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all">
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Tasks Performed</label>
+                <textarea id="tasks" rows="3" class="w-full p-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"></textarea>
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Skills Learned</label>
+                <textarea id="skills" rows="3" class="w-full p-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"></textarea>
+            </div>
+            
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Narrative</label>
+                <textarea id="narrative" rows="4" class="w-full p-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"></textarea>
+            </div>
+
+            <div class="mt-6 flex gap-3">
+                <button type="button" onclick="saveJournal()" class="flex-1 bg-gradient-to-r from-blue-500 to-indigo-500 text-white py-3 px-4 rounded-xl font-medium transform transition duration-200 hover:scale-[1.02] hover:shadow-md flex items-center justify-center gap-2">
+                    Save
+                </button>
+                <button type="button" onclick="previewJournal()" class="flex-1 bg-gray-100 text-gray-700 py-3 px-4 rounded-xl font-medium transform transition duration-200 hover:scale-[1.02] hover:bg-gray-200 flex items-center justify-center gap-2">
+                    Preview
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
