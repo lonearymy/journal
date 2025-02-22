@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Reflective Journal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-6 bg-gray-100">
+    <div id="journal" class="max-w-2xl mx-auto bg-white p-6 shadow-lg rounded-xl border">
+        <header class="text-center border-b pb-4">
+            <h1 class="text-xl font-bold">INTERNSHIP REFLECTIVE JOURNAL</h1>
+        </header>
+        
+        <div class="mt-4 space-y-3">
+            <p><strong>Intern's Name:</strong> <span id="internName">{{internName}}</span></p>
+            <p><strong>Company:</strong> <span id="companyName">{{companyName}}</span></p>
+            <p><strong>Date:</strong> <span id="date">{{date}}</span></p>
+            <p><strong>Week No.:</strong> <span id="weekNumber">{{weekNumber}}</span></p>
+            <p><strong>Total Hours Rendered:</strong> <span id="hours">{{hours}}</span></p>
+        </div>
+        
+        <div class="mt-4 border-t pt-4">
+            <p class="font-bold">Tasks/Activities Performed:</p>
+            <p id="tasks">{{tasks}}</p>
+        </div>
+        
+        <div class="mt-4">
+            <p class="font-bold">Skills Applied/Learned:</p>
+            <p id="skills">{{skills}}</p>
+        </div>
+        
+        <div class="mt-4">
+            <p class="font-bold">Elaborate What Happened and What You Learned:</p>
+            <p id="narrative">{{narrative}}</p>
+        </div>
+        
+        <div class="mt-4">
+            <p class="font-bold">Image Evidence:</p>
+            <img id="image" src="{{imageUrl}}" class="w-full h-auto rounded-lg" alt="Internship Evidence">
+        </div>
+        
+        <footer class="mt-6 text-center border-t pt-4">
+            <p><strong>Noted by:</strong></p>
+            <p>Immediate Supervisor</p>
+        </footer>
+    </div>
+    
+    <script>
+        function renderJournal(data) {
+            document.getElementById("internName").textContent = data.internName;
+            document.getElementById("companyName").textContent = data.companyName;
+            document.getElementById("date").textContent = data.date;
+            document.getElementById("weekNumber").textContent = data.weekNumber;
+            document.getElementById("hours").textContent = data.hours;
+            document.getElementById("tasks").textContent = data.tasks;
+            document.getElementById("skills").textContent = data.skills;
+            document.getElementById("narrative").textContent = data.narrative;
+            document.getElementById("image").src = data.imageUrl;
+        }
+    </script>
+</body>
+</html>
